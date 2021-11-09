@@ -1,0 +1,48 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\msier\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add dotenv
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\msier\AppData\Local\Microsoft\WindowsApps;C:\Users\msier\AppData\Roaming\npm;C:\Users\msier\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\msier\AppData\Local\Yarn\bin;
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  14.17.6
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\msier\learn\mantra-portfolio\node_modules\lmdb-store\prebuilds\win32-x64\node.abi83.node'
+
+npm manifest: 
+  {
+    "name": "mantra-portfolio",
+    "version": "1.0.0",
+    "private": true,
+    "description": "mantra-portfolio",
+    "author": "Mateo sierra",
+    "keywords": [
+      "gatsby"
+    ],
+    "scripts": {
+      "develop": "gatsby develop",
+      "start": "gatsby develop",
+      "build": "gatsby build",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean"
+    },
+    "dependencies": {
+      "gatsby": "^4.1.0",
+      "gatsby-source-contentful": "^6.1.0",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
