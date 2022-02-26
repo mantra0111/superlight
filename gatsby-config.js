@@ -1,8 +1,8 @@
-require('dotenv').config({path:"contentful.env"})
+// require('dotenv').config({path:"contentful.env"})
 
-const { 
-  access_token : accessToken, 
-  space_id : spaceId } = process.env
+// const { 
+//   access_token : accessToken, 
+//   space_id : spaceId } = process.env
 
 module.exports = {
   siteMetadata: {
@@ -10,12 +10,12 @@ module.exports = {
     title: "mantra-portfolio",
   },
   plugins: [
-    {
-      resolve: "gatsby-source-contentful",
-      options: {
-        accessToken,
-        spaceId,
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-contentful",
+    //   options: {
+    //     accessToken,
+    //     spaceId,
+    //   },
+    // },
   ],
 };
