@@ -20,5 +20,6 @@ module.exports = {
         spaceId,
       },
     },
+    "gatsby-plugin-image"
   ],
 };
