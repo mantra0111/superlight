@@ -13,12 +13,12 @@ module.exports = {
     title: "mantra-portfolio",
   },
   plugins: [
-    // {
-    //   resolve: "gatsby-source-contentful",
-    //   options: {
-    //     accessToken,
-    //     spaceId,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        accessToken,
+        spaceId,
+      },
+    },
   ],
 };
