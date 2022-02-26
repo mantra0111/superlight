@@ -1,8 +1,11 @@
-// require('dotenv').config({path:"contentful.env"})
+require('dotenv').config({path:"contentful.env"})
 
-// const { 
-//   access_token : accessToken, 
-//   space_id : spaceId } = process.env
+const { 
+  access_token : accessToken, 
+  space_id : spaceId } = process.env
+
+
+console.log(`accessToken ${accessToken}, space id ${spaceId}`)
 
 module.exports = {
   siteMetadata: {
