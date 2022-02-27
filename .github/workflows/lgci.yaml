@@ -1,5 +1,5 @@
-name: Lighthouse CI
-on: 
+name: super light
+on:
   push:
 
 jobs:
@@ -14,17 +14,19 @@ jobs:
           node-version: 14.x
       - name: Install dependencies
         run: npm install
-      - name : Create build
+      - name: Create build
         run: npm run build
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.7.x
           lhci autorun --config=./lighthouserc-ci.js
-  build : 
-    name : Gh-pages deploy
+  build:
+    name: Gh-pages deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
