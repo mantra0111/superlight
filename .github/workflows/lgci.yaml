@@ -39,6 +39,6 @@ jobs:
       - name : set identity
         run : git config --global user.email "m.sierra1037@hotmail.com"
       - name : set userName 
-        run : git config --global user.name "mantra0111"
+        run : git config --global user.name "$GITHUB_ACTOR"
       - name : deploy ... 
         run : npm run deploy
