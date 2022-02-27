@@ -1,8 +1,7 @@
 name: super light
 on:
   push:
-    branches:
-      - "master"
+  
 jobs:
   lhci:
     name: Lighthouse CI
