@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-index-tsx",
+    "path": "/",
+    "result": {"data":{"allContentfulBlogPost":{"nodes":[{"postTitle":"this is a test post","heroPicture":{"file":{"url":"//images.ctfassets.net/v3c7w6v3372r/748F89GMSLqdrkElkwn3kr/14e703eefc6b54db5a8085fd550e5744/photo-1636434593825-de7adbff82d1.jfif"}}}]}},"pageContext":{}},
+    "staticQueryHashes": []}
