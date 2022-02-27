@@ -36,5 +36,7 @@ jobs:
         run : npm install -g gatsby-cli
       - name : install gh-pages
         run : npm install gh-pages --save-dev
+      - name : set identity
+        run : git config --global user.email "m.sierra1037@hotmail.com" && git config --global user.name "mantra0111"
       - name : deploy ... 
         run : npm run deploy
