@@ -1,48 +1,57 @@
 import * as React from "react"
-//import {graphql} from 'gatsby'
-// styles
+import { graphql } from 'gatsby'
 
-// markup
-const IndexPage = (
-  //props
-) => {
+const IndexPage = (props) => {
 
+  const postNodes: {
+    postTitle: string
+    heroPicture: {
+      file: {
+        url: string
+      }
+    }
+  }[] = props.data.allContentfulBlogPost.nodes
 
-  
-  // const {postTitle,postContent} = props.data.allContentfulBlogPost.nodes[0] 
-
-  // console.log(props)
-  // console.log(postContent.raw)
+  console.log(postNodes)
   return (
     <main >
       <title>Home Page</title>
       {/* <h1> current post title = {postTitle} </h1> */}
       <h1>
-        Congratulations
-        <br />
-        <span>— you just made a Gatsby site! </span>
+        SUPER LIGHT
         <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
+          ⚡⚡⚡
         </span>
       </h1>
-      <article>
-        {/*documentToReactComponents(JSON.parse(postContent.raw))*/}
-</article>
+
+      {postNodes.map((post) => {
+        
+        let imageUrl : string = "https:" + post.heroPicture.file.url
+
+        return (<>
+          <h3>{post.postTitle}</h3>
+          <img src={imageUrl} height="300px" alt="" />
+        </>
+        )
+      })}
+
     </main>
   )
 }
 
-// export const query = graphql`query MyQuery {
-//   allContentfulBlogPost {
-//     nodes {
-//       postTitle
-//       postContent {
-//         raw
-//       }
-//     }
-//   }
-// }
-// `
+export const query = graphql`query MyQuery {
+  allContentfulBlogPost {
+    nodes {
+      postTitle
+      heroPicture {
+        file {
+          url
+        }
+      }
+    }
+  }
+}
+`
 
 
 export default IndexPage
