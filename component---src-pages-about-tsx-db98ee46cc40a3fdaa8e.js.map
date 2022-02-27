@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-about-tsx-db98ee46cc40a3fdaa8e.js","mappings":"4IAQA,UANc,WACZ,OACE","sources":["webpack://mantra-portfolio/./src/pages/about.tsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst about = () => {\r\n  return (\r\n    <div>this is the about page ...</div>\r\n  )\r\n}\r\n\r\nexport default about"],"names":[],"sourceRoot":""}
