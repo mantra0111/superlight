@@ -26,7 +26,7 @@ const IndexPage = (props) => {
 
       {postNodes.map((post) => {
         
-        let imageUrl : string = window.location.protocol + post.heroPicture.file.url
+        let imageUrl : string = "https:" + post.heroPicture.file.url
 
         return (<>
           <h3>{post.postTitle}</h3>
