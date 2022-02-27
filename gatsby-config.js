@@ -8,6 +8,7 @@ const {
 console.log(`accessToken ${accessToken}, space id ${spaceId}`)
 
 module.exports = {
+  pathPrefix: "/blog",
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "mantra-portfolio",
