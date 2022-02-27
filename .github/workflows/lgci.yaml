@@ -1,7 +1,8 @@
 name: super light
 on:
   push:
-
+    branches:
+      - "master"
 jobs:
   lhci:
     name: Lighthouse CI
@@ -37,8 +38,6 @@ jobs:
       - name : install gh-pages
         run : npm install gh-pages --save-dev
       - name : deploy ... 
-        run : gatsby build --prefix-paths && gh-pages -d public
+        run : npm run deploy
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
