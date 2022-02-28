@@ -40,5 +40,7 @@ jobs:
         run : git config --global user.email "m.sierra1037@hotmail.com"
       - name : set userName 
         run : git config --global user.name "$GITHUB_ACTOR"
+      - name : set fetch URL 
+        run : git config remote.origin.url 'https://${{secrets.ACCESS_TOKEN}}@github.com/${{ github.repository }}
       - name : deploy ... 
         run : npm run deploy
