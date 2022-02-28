@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmantra_portfolio=self.webpackChunkmantra_portfolio||[]).push([[49],{564:function(t,e,a){a.r(e);var n=a(7294);e.default=function(){return n.createElement("div",null,"this is the about page ...")}}}]);
-//# sourceMappingURL=component---src-pages-about-tsx-db98ee46cc40a3fdaa8e.js.map
