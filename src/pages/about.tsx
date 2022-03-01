@@ -2,7 +2,7 @@ import React from 'react'
 
 const about = () => {
   return (
-    <div>something changed</div>
+    <div>something changed today</div>
   )
 }
 
