@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmantra_portfolio=self.webpackChunkmantra_portfolio||[]).push([[49],{564:function(t,e,n){n.r(e);var a=n(7294);e.default=function(){return a.createElement("div",null,"something changed today")}}}]);
+//# sourceMappingURL=component---src-pages-about-tsx-e0aad46ae5bcbcb98575.js.map
