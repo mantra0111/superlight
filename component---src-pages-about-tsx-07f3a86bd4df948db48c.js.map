@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-about-tsx-07f3a86bd4df948db48c.js","mappings":"gIAQA,UANc,WACZ,OACE","sources":["webpack://superlight/./src/pages/about.tsx"],"sourcesContent":["import React from 'react'\n\nconst about = () => {\n  return (\n    <div>something changed today</div>\n  )\n}\n\nexport default about"],"names":[],"sourceRoot":""}
