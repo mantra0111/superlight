@@ -6,6 +6,7 @@ import {PostTeaserProps,PostTeaser} from '../components/PostTeaser'
 const IndexPage = (props) => {
 
   const postNodes: {
+    id : string
     postTitle: string
     createdAt : string
     heroPicture: {
@@ -33,7 +34,7 @@ const IndexPage = (props) => {
           postDate={post.createdAt} 
           postTitle={post.postTitle}
           postThumbnailUrl={imageUrl}
-          postUrl={imageUrl} />)
+          postUrl={post.id} />)
       })}
 
     </main>
@@ -43,6 +44,7 @@ const IndexPage = (props) => {
 export const query = graphql`query MyQuery {
   allContentfulBlogPost {
     nodes {
+      id
       postTitle
       createdAt(formatString: "DD/MM/yyyy")
       heroPicture {
