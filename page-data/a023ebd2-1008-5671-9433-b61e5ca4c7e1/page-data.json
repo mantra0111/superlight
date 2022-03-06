@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-contentful-blog-post-id-tsx",
+    "path": "/a023ebd2-1008-5671-9433-b61e5ca4c7e1/",
+    "result": {"data":{"contentfulBlogPost":{"heroPicture":{"file":{"url":"//images.ctfassets.net/v3c7w6v3372r/5wmptts07VH6uguIJhtU5X/efac2dbbc40dde77c99e04559415cdcf/bianca-ackermann-ys-sZZkdT1s-unsplash__1_.jpg"}},"postTitle":"BzzzzZZzzZZzz ...","postContent":{"raw":"{\"nodeType\":\"document\",\"data\":{},\"content\":[{\"nodeType\":\"heading-1\",\"content\":[{\"nodeType\":\"text\",\"value\":\"BZZZZZ\",\"marks\":[],\"data\":{}}],\"data\":{}},{\"nodeType\":\"embedded-asset-block\",\"content\":[],\"data\":{\"target\":{\"sys\":{\"id\":\"7u8OP45L6pNpdTdtKG3Eld\",\"type\":\"Link\",\"linkType\":\"Asset\"}}}},{\"nodeType\":\"paragraph\",\"content\":[{\"nodeType\":\"text\",\"value\":\"\",\"marks\":[],\"data\":{}}],\"data\":{}}]}"}}},"pageContext":{"id":"a023ebd2-1008-5671-9433-b61e5ca4c7e1","__params":{"id":"a023ebd2-1008-5671-9433-b61e5ca4c7e1"}}},
+    "staticQueryHashes": []}

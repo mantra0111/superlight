@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-tsx",
     "path": "/",
-    "result": {"data":{"allContentfulBlogPost":{"nodes":[{"postTitle":"BzzzzZZzzZZzz ...","createdAt":"04/03/2022","heroPicture":{"file":{"url":"//images.ctfassets.net/v3c7w6v3372r/5wmptts07VH6uguIJhtU5X/efac2dbbc40dde77c99e04559415cdcf/bianca-ackermann-ys-sZZkdT1s-unsplash__1_.jpg"}}},{"postTitle":"this is a test post","createdAt":"10/11/2021","heroPicture":{"file":{"url":"//images.ctfassets.net/v3c7w6v3372r/748F89GMSLqdrkElkwn3kr/14e703eefc6b54db5a8085fd550e5744/photo-1636434593825-de7adbff82d1.jfif"}}}]}},"pageContext":{}},
+    "result": {"data":{"allContentfulBlogPost":{"nodes":[{"id":"a023ebd2-1008-5671-9433-b61e5ca4c7e1","postTitle":"BzzzzZZzzZZzz ...","createdAt":"04/03/2022","heroPicture":{"file":{"url":"//images.ctfassets.net/v3c7w6v3372r/5wmptts07VH6uguIJhtU5X/efac2dbbc40dde77c99e04559415cdcf/bianca-ackermann-ys-sZZkdT1s-unsplash__1_.jpg"}}},{"id":"849c0e8c-f7eb-5c00-bd05-e6d2c6e82725","postTitle":"this is a test post","createdAt":"10/11/2021","heroPicture":{"file":{"url":"//images.ctfassets.net/v3c7w6v3372r/748F89GMSLqdrkElkwn3kr/14e703eefc6b54db5a8085fd550e5744/photo-1636434593825-de7adbff82d1.jfif"}}}]}},"pageContext":{}},
     "staticQueryHashes": []}
