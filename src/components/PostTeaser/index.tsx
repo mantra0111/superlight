@@ -1,0 +1,1 @@
+export {PostTeaserProps, default as PostTeaser}from './PostTeaser'

@@ -1,10 +1,14 @@
 import * as React from "react"
 import { graphql } from 'gatsby'
+import {PostTeaserProps,PostTeaser} from '../components/PostTeaser'
+
 
 const IndexPage = (props) => {
 
   const postNodes: {
+    id : string
     postTitle: string
+    createdAt : string
     heroPicture: {
       file: {
         url: string
@@ -16,7 +20,7 @@ const IndexPage = (props) => {
   return (
     <main >
       <title>Home Page</title>
-      {/* <h1> current post title = {postTitle} </h1> */}
+
       <h1>
         SUPER LIGHT
         <span role="img" aria-label="Party popper emojis">
@@ -25,14 +29,12 @@ const IndexPage = (props) => {
       </h1>
 
       {postNodes.map((post) => {
-        
         let imageUrl : string = "https:" + post.heroPicture.file.url
-
-        return (<>
-          <h3>{post.postTitle}</h3>
-          <img src={imageUrl} height="300px" alt="" />
-        </>
-        )
+        return (<PostTeaser 
+          postDate={post.createdAt} 
+          postTitle={post.postTitle}
+          postThumbnailUrl={imageUrl}
+          postUrl={post.id} />)
       })}
 
     </main>
@@ -42,7 +44,9 @@ const IndexPage = (props) => {
 export const query = graphql`query MyQuery {
   allContentfulBlogPost {
     nodes {
+      id
       postTitle
+      createdAt(formatString: "DD/MM/yyyy")
       heroPicture {
         file {
           url
@@ -51,6 +55,7 @@ export const query = graphql`query MyQuery {
     }
   }
 }
+
 `
 
 
