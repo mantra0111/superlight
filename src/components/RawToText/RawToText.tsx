@@ -9,34 +9,41 @@ interface Content {
      "heading-1" |
      "paragraph" | 
      "embedded-asset-block"
-    value : string
-    marks : unknown[]
+    content : {
+        nodeType : string
+        value : string
+        marks : unknown[]
+        data : unknown
+    }[] | null
+
     data : {
         target : {
             sys : {
                 id : string
                 type : string
                 linkType : string
-            }
-        }
+            } | null
+        }| null
     }  
 }
 
-interface ContentNode {
+interface PostContent {
     nodeType : string
+    data : Object
     content : Content[]
 }
 
-function HTMLMaker({nodeType}:Content) {
-    const maker : {[property in Content["nodeType"]] : () => React.ReactNode} = {
-        "heading-1" : () => <h1>{}</h1>,
-        "heading-2" : () => <h2>{}</h2>,
-        "heading-3" : () => <h3>{}</h3>,
-        "heading-4" : () => <h4>{}</h4>,
-        "heading-5" : () => <h5>{}</h5>,
-        "heading-6" : () => <h6>{}</h6>,
-        "embedded-asset-block" : () => <img src="" alt="" />,
-        "paragraph" : () => <p>{}</p>
+function HTMLMaker({nodeType,content,data}:Content) {
+    
+    const maker : {[property in Content["nodeType"]] : React.ReactNode} = {
+        "heading-1" : content.length > 0 ? <h1> {content[0].value}</h1> : null,
+        "heading-2" : content.length > 0 ? <h2> {content[0].value}</h2> : null,
+        "heading-3" : content.length > 0 ? <h3> {content[0].value}</h3> : null,
+        "heading-4" : content.length > 0 ? <h4> {content[0].value}</h4> : null,
+        "heading-5" : content.length > 0 ? <h5> {content[0].value}</h5> : null,
+        "heading-6" : content.length > 0 ? <h6> {content[0].value}</h6> : null,
+        "embedded-asset-block" : <img src={``} alt={`${data.target?.sys.id}`} />,
+        "paragraph" : content.length > 0 ? content[0].value === "" ? <br/> : <p>{content[0].value}</p> : null
     }
 
     return maker[nodeType]
@@ -44,15 +51,19 @@ function HTMLMaker({nodeType}:Content) {
 
 
 interface RawToEdibleProps {
-    postContent: {
         raw: string
-      }
 }
 
-const RawToEdible :React.FC<RawToEdibleProps> = ({postContent,children}) => {
-  return (
-    <div></div>
-  )
+const RawToEdible :React.FC<RawToEdibleProps> = ({raw}) => {
+
+    
+    return(
+        <section id="post-content" >
+            {(JSON.parse(raw) as PostContent).content.map((node)=>
+            //@ts-ignore
+            HTMLMaker(node))}
+        </section>
+    )
 }
 
 export default RawToEdible

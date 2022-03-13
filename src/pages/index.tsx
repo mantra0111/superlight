@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from 'gatsby'
-import {PostTeaserProps,PostTeaser} from '../components/PostTeaser'
+import {PostTeaser} from '../components/PostTeaser'
 
 
 const IndexPage = (props) => {
@@ -16,7 +16,6 @@ const IndexPage = (props) => {
     }
   }[] = props.data.allContentfulBlogPost.nodes
 
-  console.log(postNodes)
   return (
     <main >
       <title>Home Page</title>
