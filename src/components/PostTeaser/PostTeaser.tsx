@@ -13,7 +13,7 @@ const PostTeaser = ({postThumbnailUrl,postDate,postTitle,postUrl,author} : PostT
     <a href={postUrl} >
         <h4>{postTitle}</h4>
         <h4>{postDate}{author? `,by ${author}.` : `.`}</h4>
-        <img height={200} loading='lazy' src={postThumbnailUrl} alt={`post "${postTitle}" thumbnail image`} />
+        <img height={200} src={postThumbnailUrl} alt={`post "${postTitle}" thumbnail image`} />
     </a>
   )
 }
