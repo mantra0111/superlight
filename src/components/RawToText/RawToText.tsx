@@ -1,4 +1,5 @@
 import React from 'react'
+import AssetToUrl from '../AssetToUrl'
 
 interface Content {
     nodeType : "heading-6" |
@@ -42,7 +43,7 @@ function HTMLMaker({nodeType,content,data}:Content) {
         "heading-4" : content.length ? <h4> {content[0].value}</h4> : null,
         "heading-5" : content.length ? <h5> {content[0].value}</h5> : null,
         "heading-6" : content.length ? <h6> {content[0].value}</h6> : null,
-        "embedded-asset-block" : <img src={``} alt={`${data.target?.sys.id}`} />,
+        "embedded-asset-block" : <AssetToUrl assetId={data.target?.sys.id} />,
         "paragraph" : content.length > 0 ? content[0].value === "" ? <br/> : <p>{content[0].value}</p> : null
     }
 
