@@ -1,1 +1,2 @@
-export {PostTeaserProps, default as PostTeaser}from './PostTeaser'
+export { default as PostTeaser}from './PostTeaser'
+export {PostTeaserProps} from './PostTeaser'
