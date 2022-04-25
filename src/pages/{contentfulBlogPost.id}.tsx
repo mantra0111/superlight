@@ -6,6 +6,12 @@ interface QueryAsProps {
   contentfulBlogPost: {
     heroPicture: {
       file: {
+        details : {
+          image : {
+            width : number
+            height : number
+          }
+        }
         url: string
       }
     }
@@ -25,7 +31,11 @@ const contentfulBlogPost = (props: PageProps<QueryAsProps>) => {
       <section id="post-header" >
       <h1><a href="/">{`<-`} back home </a></h1>
       <h1>{postTitle}</h1>
-      <img src={`https:${heroPicture.file.url}`} alt={`post "${postTitle}" hero image`} />
+      <img 
+        src={`https:${heroPicture.file.url}`} 
+        alt={`post "${postTitle}" hero image`}
+        height={heroPicture.file.details.image.height}
+        width={heroPicture.file.details.image.width} />
       </section>
       <RawToText raw={postContent.raw} />
     </main>
@@ -37,6 +47,12 @@ export const query = graphql`query PostContentQuery($id : String) {
       heroPicture {
         file {
           url
+          details {
+            image {
+              width 
+              height
+            }
+          }
         }
       }
       postTitle

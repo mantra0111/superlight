@@ -1,1 +1,1 @@
-export {default} from './AssetToUrl'
+export {default} from './AssetIdToUrl'

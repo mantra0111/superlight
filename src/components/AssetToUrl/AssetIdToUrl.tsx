@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 const AssetToUrl = ({ assetId }: { assetId: string }) => {
   interface ContentfulAssetNode {
     contentful_id: string
+    title : string
     file: {
       url: string
       details: {
@@ -22,10 +23,12 @@ const AssetToUrl = ({ assetId }: { assetId: string }) => {
   }
 
   return (
-    <StaticQuery query={graphql`
+    <StaticQuery
+      query={graphql`
         query GetAllAssetsQuery {
   allContentfulAsset {
     nodes {
+      title
       contentful_id
       file {
         url
@@ -40,12 +43,14 @@ const AssetToUrl = ({ assetId }: { assetId: string }) => {
   }
 }
     
-        `} render={(data: GetAllAssetsQuery) => {
-        const filterAsset: ContentfulAssetNode = data.allContentfulAsset.nodes.filter((node) => node.contentful_id === assetId)[0]
+        `}
 
+      render={(data: GetAllAssetsQuery) => {
+        const filterAsset: ContentfulAssetNode = data.allContentfulAsset.nodes.filter((node) => node.contentful_id === assetId)[0]
+        const {title} = filterAsset
         const { url } = filterAsset.file
         const { height, width } = filterAsset.file.details.image
-        return (<img height={height} width={width} src={`https:${url}`} />)
+        return (<img height={height} alt={title} width={width} src={`https:${url}`} />)
       }} />
   )
 }
