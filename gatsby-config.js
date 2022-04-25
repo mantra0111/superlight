@@ -14,6 +14,7 @@ module.exports = {
     title: "mantra-portfolio",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-contentful",
       options: {

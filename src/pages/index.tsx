@@ -1,14 +1,15 @@
-import * as React from "react"
+import React from "react"
 import { graphql } from 'gatsby'
-import {PostTeaser} from '../components/PostTeaser'
+import { PostTeaser } from '../components/PostTeaser'
+import { Helmet } from "react-helmet"
 
 
 const IndexPage = (props) => {
 
   const postNodes: {
-    id : string
+    id: string
     postTitle: string
-    createdAt : string
+    createdAt: string
     heroPicture: {
       file: {
         url: string
@@ -18,8 +19,13 @@ const IndexPage = (props) => {
 
   return (
     <main >
-      <title>Home Page</title>
-
+      <Helmet
+        title={`SuperLight`}
+        htmlAttributes={{ lang: 'en' }} >
+        <meta name="author" content="Mateo Sierra Betancur" />
+        <meta name="keywords" content="development,blog,javascript,mateo,sierra" />
+        <meta name="description" content="blog about development ... " />
+      </Helmet>
       <h1>
         SUPER LIGHT
         <span role="img" aria-label="Party popper emojis">
@@ -28,9 +34,9 @@ const IndexPage = (props) => {
       </h1>
 
       {postNodes.map((post) => {
-        let imageUrl : string = "https:" + post.heroPicture.file.url
-        return (<PostTeaser 
-          postDate={post.createdAt} 
+        let imageUrl: string = "https:" + post.heroPicture.file.url
+        return (<PostTeaser
+          postDate={post.createdAt}
           postTitle={post.postTitle}
           postThumbnailUrl={imageUrl}
           postUrl={post.id} />)

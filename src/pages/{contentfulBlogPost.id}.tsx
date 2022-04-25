@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from 'react-helmet'
 import { PageProps, graphql } from 'gatsby'
 import RawToText from '../components/RawToText'
 
@@ -28,6 +29,13 @@ const contentfulBlogPost = (props: PageProps<QueryAsProps>) => {
   
   return (
     <main >
+      <Helmet
+        title={`SuperLight - ${postTitle}`}
+        htmlAttributes={{ lang: 'en' }} >
+        <meta name="author" content="Mateo Sierra Betancur" />
+        <meta name="keywords" content="development,blog,javascript,mateo,sierra" />
+        <meta name="description" content="blog about development ... " />
+      </Helmet>
       <section id="post-header" >
       <h1><a href="/">{`<-`} back home </a></h1>
       <h1>{postTitle}</h1>
